@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: cpu-scheduler-simulator
+    env: python
+    rootDir: CPU_Schedular_algorithm
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app

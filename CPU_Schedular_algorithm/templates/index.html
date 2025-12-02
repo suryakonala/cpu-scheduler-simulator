@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CPU Scheduler Simulator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>CPU Scheduler Simulator</h1>
+
+  <h2>Enter Processes</h2>
+  <table id="processTable">
+    <tr>
+      <th>PID</th>
+      <th>Arrival Time</th>
+      <th>Burst Time</th>
+      <th>Priority</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td><input></td>
+      <td><input></td>
+      <td><input></td>
+    </tr>
+  </table>
+
+  <button class="add-btn" onclick="addRow()">+ Add Process</button>
+
+  <h2>Choose Algorithm</h2>
+  <select id="algorithm">
+    <option>FCFS</option>
+    <option>SJF</option>
+    <option>PRIORITY</option>
+    <option>ROUND</option>
+  </select>
+
+  <input id="quantum" placeholder="Time Quantum (RR only)">
+
+  <button class="run-btn" onclick="runAlgorithm()">Run Algorithm</button>
+
+  <h2>Gantt Chart</h2>
+  <div id="gantt"></div>
+
+  <h2>Results</h2>
+  <div id="results"></div>
+
+  <!-- ✅ ✅ ✅ ALGORITHM COMPARISON SECTION -->
+  <h2>Algorithm Comparison</h2>
+  <canvas id="compareChart" width="400" height="200"></canvas>
+
+  <button class="run-btn" onclick="compareAlgorithms()">Compare All Algorithms</button>
+
+</div>
+
+<!-- ✅ ✅ ✅ Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- ✅ ✅ ✅ Your Script (FIXED CLOSING TAG) -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
