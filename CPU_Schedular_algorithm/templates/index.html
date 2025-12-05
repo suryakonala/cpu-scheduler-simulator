@@ -30,10 +30,12 @@
 
   <h2>Choose Algorithm</h2>
   <select id="algorithm">
-    <option>FCFS</option>
-    <option>SJF</option>
-    <option>PRIORITY</option>
-    <option>ROUND</option>
+    <option value="FCFS">FCFS</option>
+    <option value="SJF">SJF</option>
+    <option value="SRTF">Preemptive SJF (SRTF)</option>
+    <option value="PRIORITY">PRIORITY</option>
+    <option value="PPRIORITY">Preemptive Priority</option>
+    <option value="ROUND">ROUND ROBIN</option>
   </select>
 
   <input id="quantum" placeholder="Time Quantum (RR only)">
@@ -57,7 +59,7 @@
 <!-- ✅ ✅ ✅ Chart.js Library -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<!-- ✅ ✅ ✅ Your Script (FIXED CLOSING TAG) -->
+<!-- ✅ ✅ ✅ Your Script -->
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
